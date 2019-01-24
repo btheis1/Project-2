@@ -1,3 +1,22 @@
+<div class="intro-text lighten-2 green white-text">
+    <h2>Select three ingredients you'd like to cook with...</h3>
+        
+            <!--Look into Materialize Accordians-->
+            <!--Validation to limit number of boxes checked in form (only 3)-->
+        <form action="#">
+            
+            {{#each food}}
+                <h4 class="blue darken-4 white-text">
+                    <label>
+                        <input type="checkbox"/>
+                        <span>{{id}} {{name}} Category: {{category}}</span>
+                    </label>
+                    </h4>
+           {{/each}}
+          
+        </form>    
+ </div>       
+   
 {{#each view}}
 <p>{{name}}</p>
 {{/each}}

@@ -11,12 +11,12 @@ console.log ("hello world");
 router.get("/", function(req, res) {
   food.all(function (data) {
     var hbsObject = {
-      view: data
+    food: data
     };
-    console.log(hbsObject);
+    console.log("In the / ", hbsObject);
     res.render("index", hbsObject);
   });
-   
+
 });
 // // Create all our routes and set up logic within those routes where required.
 router.get("/view", function (req, res) {
