@@ -8,7 +8,13 @@ var router = express.Router();
 //  Import the model (food.js) to use its database functions.
 var food = require("../models/food.js");
 router.get("/", function(req, res) {
-// res.redirect("/view");
+  food.all(function (data) {
+    var hbsObject = {
+    food: data
+    };
+    console.log("In the / ", hbsObject);
+    res.render("index", hbsObject);
+  });
 });
 // // Create all our routes and set up logic within those routes where required.
 router.get("/view", function (req, res) {
