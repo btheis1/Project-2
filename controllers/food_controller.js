@@ -53,17 +53,18 @@ router.get("/view", function (req, res) {
 // // Our POST request to add an ingredient to the database
 // //EXPRESS POST ROUTE
 router.post('/view/create', function (req, res) {
-  // food.insert([
-  //   'name', "category"], 
-  //   [req.body.name, req.body.category],
-  //    function (result) {
-  //     console.log(result);
-  //     res.redirect("/");
-  food.create(req.body.name, function(result) {
+  food.insert([
+    'name', "category"], 
+    [req.body.name, req.body.category],
+     function (result) {
+      console.log(result);
+      // res.redirect("/");
+  // food.create(req.body.name, function(result) {
     // wrapper for orm.js that using MySQL insert callback will return a log to console,
     // render back to index with handle
     // console.log(result);
-    res.redirect("/view");
+    // res.redirect("/view");
+    res.json(result);
     
   });
 });
