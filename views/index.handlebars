@@ -3,20 +3,16 @@
         
             <!--Look into Materialize Accordians-->
             <!--Validation to limit number of boxes checked in form (only 3)-->
-        <form action="#">
-            
-            {{#each food}}
-                <h4 class="blue darken-4 white-text">
-                    <label>
-                        <input type="checkbox"/>
-                        <span>{{id}} {{name}} Category: {{category}}</span>
-                    </label>
-                    </h4>
-           {{/each}}
-          
-        </form>    
- </div>       
-   
-{{#each view}}
-<p>{{name}}</p>
-{{/each}}
+    <form action="#">
+        
+        {{#each food}}
+            <h4 class="blue darken-4 white-text">
+                <label>
+                    <input type="checkbox"/>
+                    <span>{{id}} {{name}} Category: {{category}}</span>
+                </label>
+            </h4>
+        {{/each}}
+        
+    </form>    
+</div>       
