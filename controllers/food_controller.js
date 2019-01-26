@@ -75,13 +75,7 @@ router.put('/view/update/:id', function (req, res) {
 
   // console.log("newFood", newFood);
 
-  food.update(
-     newFood, function (data) {
-      //  res.redirect("/");
-      res.end();
-  
-  });
-});
+ });
 
 // Export routes for server.js to use.
 module.exports = router;
