@@ -24,11 +24,11 @@ INSERT INTO ingredients (name, category) VALUES ("Lettuce", "Vegetable");
 INSERT INTO ingredients (name, category) VALUES ("Basil", "Vegetable");
 INSERT INTO ingredients (name, category) VALUES ("Parsley", "Vegetable");
 -- protien seeding
-INSERT INTO ingredients (name, category) VALUES ("Chicken", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Pork", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Beef", "Protien");
+INSERT INTO ingredients (name, category) VALUES ("Chicken", "Protein");
+INSERT INTO ingredients (name, category) VALUES ("Pork", "Protein");
+INSERT INTO ingredients (name, category) VALUES ("Beef", "Protein");
 INSERT INTO ingredients (name, category) VALUES ("Fish", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Tofu", "Protien");
+INSERT INTO ingredients (name, category) VALUES ("Tofu", "Protein");
 -- fruit seeding
 INSERT INTO ingredients (name, category) VALUES ("Apple", "Fruit");
 INSERT INTO ingredients (name, category) VALUES ("Banana", "Fruit");
