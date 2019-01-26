@@ -3,16 +3,57 @@
         
             <!--Look into Materialize Accordians-->
             <!--Validation to limit number of boxes checked in form (only 3)-->
-    <form action="#">
-        
-        {{#each food}}
-            <h4 class="blue darken-4 white-text">
-                <label>
-                    <input type="checkbox"/>
-                    <span>{{id}} {{name}} Category: {{category}}</span>
-                </label>
-            </h4>
-        {{/each}}
-        
-    </form>    
-</div>       
+        <form action="#">
+            
+           {{#each vegetables}}
+                <h4 class="blue darken-4 white-text">
+                    <label>
+                        <input type="checkbox"/>
+                        <span>{{id}} {{name}} Category: {{category}}</span>
+                    </label>
+                    </h4>
+           {{/each}}
+
+                      {{#each protein}}
+                <h4 class="blue darken-4 white-text">
+                    <label>
+                        <input type="checkbox"/>
+                        <span>{{id}} {{name}} Category: {{category}}</span>
+                    </label>
+                    </h4>
+           {{/each}}
+
+                      {{#each fruit}}
+                <h4 class="blue darken-4 white-text">
+                    <label>
+                        <input type="checkbox"/>
+                        <span>{{id}} {{name}} Category: {{category}}</span>
+                    </label>
+                    </h4>
+           {{/each}}
+
+                      {{#each dairy}}
+                <h4 class="blue darken-4 white-text">
+                    <label>
+                        <input type="checkbox"/>
+                        <span>{{id}} {{name}} Category: {{category}}</span>
+                    </label>
+                    </h4>
+           {{/each}}
+
+                      {{#each legumes}}
+                <h4 class="blue darken-4 white-text">
+                    <label>
+                        <input type="checkbox"/>
+                        <span>{{id}} {{name}} Category: {{category}}</span>
+                    </label>
+                    </h4>
+           {{/each}}
+
+
+
+
+          
+        </form>    
+ </div>       
+   
