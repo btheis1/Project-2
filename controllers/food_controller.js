@@ -10,10 +10,31 @@ console.log ("hello world");
 
 router.get("/", function(req, res) {
   food.all(function (data) {
+    var vegetables = data.filter(function(item) {
+      return item.category === "Vegetable";
+    });
+   var dairy = data.filter(function(item) {
+      return item.category === "Dairy";
+   });
+   var protein = data.filter(function(item) {
+    return item.category === "Protein";
+   });
+
+  var fruit = data.filter(function(item) {
+    return item.category === "Fruit";
+  });
+  var legumes = data.filter(function(item) {
+    return item.category === "Legumes";
+  });
+
     var hbsObject = {
-    food: data
+    vegetables: vegetables,
+    dairy: dairy,
+    protein: protein,
+    fruit: fruit,
+    legumes: legumes,
     };
-    console.log("In the / ", hbsObject);
+    // console.log("In the / ", hbsObject);
     res.render("index", hbsObject);
   });
 
