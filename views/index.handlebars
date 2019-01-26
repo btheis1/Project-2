@@ -1,59 +1,68 @@
-<div class="intro-text lighten-2 green white-text">
-    <h2>Select three ingredients you'd like to cook with...</h3>
-        
-            <!--Look into Materialize Accordians-->
-            <!--Validation to limit number of boxes checked in form (only 3)-->
-        <form action="#">
-            
-           {{#each vegetables}}
-                <h4 class="blue darken-4 white-text">
-                    <label>
-                        <input type="checkbox"/>
-                        <span>{{id}} {{name}} Category: {{category}}</span>
-                    </label>
-                    </h4>
-           {{/each}}
+    <div class="parallax-container">
+      <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
+    </div>
+    {{!-- <div class="container"> --}}
+      <div class="row-transparent">
+        <h2 class="choose card-transparent z-depth-5">Choose three ingredients that you'd like to cook with...</h2>
+          <ul class="collapsible">
+            <li>
+                <div class="collapsible-header">Vegetables</div>
+                    <div class="collapsible-body"><span>
+                        {{#each vegetables}}
+                        <label>
+                            <input type="checkbox"/>
+                            <span>{{name  }}  </span>
+                        </label>
+                    {{/each}}
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">Protein</div>
+                    <div class="collapsible-body"><span>
+                        {{#each protein}}
+                        <label>
+                            <input type="checkbox"/>
+                            <span>{{name  }}  </span>
+                        </label>
+                    {{/each}}
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">Fruits</div>
+                    <div class="collapsible-body"><span>
+                        {{#each fruit}}
+                        <label>
+                            <input type="checkbox"/>
+                            <span>{{name  }}  </span>
+                        </label>
+                    {{/each}}
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">Dairy</div>
+                    <div class="collapsible-body"><span>
+                        {{#each dairy}}
+                        <label>
+                            <input type="checkbox"/>
+                            <span>{{name  }}  </span>
+                        </label>
+                    {{/each}}
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">Legumes</div>
+                    <div class="collapsible-body"><span>
+                        {{#each legumes}}
+                        <label>
+                            <input type="checkbox"/>
+                            <span>{{name  }}  </span>
+                        </label>
+                    {{/each}}
+                    </span></div>
+            </li>
+      </div>
+    {{!-- </div> --}}
+    <div class="parallax-container">
+      <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
+    </div>
 
-                      {{#each protein}}
-                <h4 class="blue darken-4 white-text">
-                    <label>
-                        <input type="checkbox"/>
-                        <span>{{id}} {{name}} Category: {{category}}</span>
-                    </label>
-                    </h4>
-           {{/each}}
-
-                      {{#each fruit}}
-                <h4 class="blue darken-4 white-text">
-                    <label>
-                        <input type="checkbox"/>
-                        <span>{{id}} {{name}} Category: {{category}}</span>
-                    </label>
-                    </h4>
-           {{/each}}
-
-                      {{#each dairy}}
-                <h4 class="blue darken-4 white-text">
-                    <label>
-                        <input type="checkbox"/>
-                        <span>{{id}} {{name}} Category: {{category}}</span>
-                    </label>
-                    </h4>
-           {{/each}}
-
-                      {{#each legumes}}
-                <h4 class="blue darken-4 white-text">
-                    <label>
-                        <input type="checkbox"/>
-                        <span>{{id}} {{name}} Category: {{category}}</span>
-                    </label>
-                    </h4>
-           {{/each}}
-
-
-
-
-          
-        </form>    
- </div>       
-   
