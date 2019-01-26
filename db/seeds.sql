@@ -1,15 +1,15 @@
 -- vegetable seeding 
-INSERT INTO ingredients (name, category) VALUES ("Articichoke", "Vegetable");
+INSERT INTO ingredients (name, category) VALUES ("Artichoke", "Vegetable");
 INSERT INTO ingredients (name, category) VALUES ("Argula", "Vegetable");
 INSERT INTO ingredients (name, category) VALUES ("Asparagus", "Vegetable");
-INSERT INTO ingredients (name, category) VALUES ("Beans", "Vegetable");
+INSERT INTO ingredients (name, category) VALUES ("Broccoli", "Vegetable");
 INSERT INTO ingredients (name, category) VALUES ("Beets", "Vegetable");
--- protien seeding
-INSERT INTO ingredients (name, category) VALUES ("Chicken", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Pork", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Beef", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Fish", "Protien");
-INSERT INTO ingredients (name, category) VALUES ("Tofu", "Protien");
+-- protein seeding
+INSERT INTO ingredients (name, category) VALUES ("Chicken", "Protein");
+INSERT INTO ingredients (name, category) VALUES ("Pork", "Protein");
+INSERT INTO ingredients (name, category) VALUES ("Beef", "Protein");
+INSERT INTO ingredients (name, category) VALUES ("Fish", "Protein");
+INSERT INTO ingredients (name, category) VALUES ("Tofu", "Protein");
 -- fruit seeding
 INSERT INTO ingredients (name, category) VALUES ("Apple", "Fruit");
 INSERT INTO ingredients (name, category) VALUES ("Banana", "Fruit");
@@ -21,7 +21,7 @@ INSERT INTO ingredients (name, category) VALUES ("Milk", "Dairy");
 INSERT INTO ingredients (name, category) VALUES ("Yogurt", "Dairy");
 INSERT INTO ingredients (name, category) VALUES ("Egg", "Dairy");
 INSERT INTO ingredients (name, category) VALUES ("Cheese", "Dairy");
-INSERT INTO ingredients (name, category) VALUES ("Condense Milk", "Dairy");
+INSERT INTO ingredients (name, category) VALUES ("Condensed Milk", "Dairy");
 -- legumes seeding
 INSERT INTO ingredients (name, category) VALUES ("Black Beans", "Legumes");
 INSERT INTO ingredients (name, category) VALUES ("Lima Beans", "Legumes");
