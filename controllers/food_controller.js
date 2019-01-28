@@ -59,7 +59,7 @@ router.post('/view/create', function (req, res) {
      function (result) {
       console.log(result);
       // res.redirect("/");
-  // food.create(req.body.name, function(result) {
+    // food.create(req.body.name, function(result) {
     // wrapper for orm.js that using MySQL insert callback will return a log to console,
     // render back to index with handle
     // console.log(result);

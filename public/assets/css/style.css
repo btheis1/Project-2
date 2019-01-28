@@ -2,7 +2,9 @@
     width: 75%;
     text-align: center;
 } */
-
+.parallax-container {
+    height: 200px;
+}
 .choose {
     color: white;
     background-color: green;
