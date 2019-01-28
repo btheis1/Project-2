@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
+    "kraft-recipe-api": "^0.1.2",
     "mysql": "^2.16.0"
   }
 }
