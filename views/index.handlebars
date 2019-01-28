@@ -4,65 +4,101 @@
     {{!-- <div class="container"> --}}
       <div class="row-transparent">
         <h2 class="choose card-transparent z-depth-5">Choose three ingredients that you'd like to cook with...</h2>
-          <ul class="collapsible">
-            <li>
-                <div class="collapsible-header">Vegetables</div>
-                    <div class="collapsible-body"><span>
-                        {{#each vegetables}}
-                        <label>
-                            <input type="checkbox"/>
-                            <span>{{name  }}  </span>
-                        </label>
-                    {{/each}}
-                    </span></div>
-            </li>
-            <li>
-                <div class="collapsible-header">Protein</div>
-                    <div class="collapsible-body"><span>
-                        {{#each protein}}
-                        <label>
-                            <input type="checkbox"/>
-                            <span>{{name}}  </span>
-                        </label>
-                    {{/each}}
-                    </span></div>
-            </li>
-            <li>
-                <div class="collapsible-header">Fruits</div>
-                    <div class="collapsible-body"><span>
-                        {{#each fruit}}
-                        <label>
-                            <input type="checkbox"/>
-                            <span>{{name  }}  </span>
-                        </label>
-                    {{/each}}
-                    </span></div>
-            </li>
-            <li>
-                <div class="collapsible-header">Dairy</div>
-                    <div class="collapsible-body"><span>
-                        {{#each dairy}}
-                        <label>
-                            <input type="checkbox"/>
-                            <span>{{name  }}  </span>
-                        </label>
-                    {{/each}}
-                    </span></div>
-            </li>
-            <li>
-                <div class="collapsible-header">Legumes</div>
-                    <div class="collapsible-body"><span>
-                        {{#each legumes}}
-                        <label>
-                            <input type="checkbox"/>
-                            <span>{{name  }}  </span>
-                        </label>
-                    {{/each}}
-                    </span></div>
-            </li>
+            <form action="#">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">Vegetables</div>
+                            <div class="collapsible-body"><span>
+                                {{#each vegetables}}
+                                <label>
+                                    <input type="checkbox"/>
+                                    
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Protein</div>
+                            <div class="collapsible-body"><span>
+                                {{#each protein}}
+                                <label>
+                                    <input type="checkbox"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Fruits</div>
+                            <div class="collapsible-body"><span>
+                                {{#each fruit}}
+                                <label>
+                                    <input type="checkbox"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Dairy</div>
+                            <div class="collapsible-body"><span>
+                                {{#each dairy}}
+                                <label>
+                                    <input type="checkbox"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Legumes</div>
+                            <div class="collapsible-body"><span>
+                                {{#each legumes}}
+                                <label>
+                                    <input type="checkbox"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                <button class="btn waves-effect waves-light blue white-text" type="submit" name="submit" id="recipes">Search Recipes!</button>
+            </form>
       </div>
     {{!-- </div> --}}
     <div class="parallax-container">
       <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
+    </div>
+       {{!-- <body class = "container">    --}}
+    <h2 class="choose card-transparent z-depth-5">Add a new ingredient to your fridge: </h2>
+    <br><br>
+    <div class = "row">
+        <form class = "col s12">
+        <div class = "row">
+            <div class = "input-field col s4">
+                <i class = "material-icons prefix">account_circle</i>
+                <input placeholder = "foodName" value = "carrots" id = "name"
+                    type = "text" class = "active validate" required />
+                <label for = "name"><strong>Ingredient Name:</strong></label>
+            </div>
+            <div class="input-field col s4">
+                <select>
+                <option value="" disabled selected>Choose your category</option>
+                <option value="1">Vegetable</option>
+                <option value="2">Protein</option>
+                <option value="3">Fruit</option>
+                <option value="3">Dairy</option>
+                <option value="3">Legumes</option>
+                <option value="3">Other</option>
+
+                </select>
+                <label><strong>Ingredient Cagegory:</strong></label>
+            </div>
+            <div class="col s4">
+                <button class="btn waves-effect waves-light blue white-text" type="submit" name="newFood" id="newFood"><strong>Add Ingredient!</strong></button>
+            </div>
+            
+        </div>
+        
     </div>
 
