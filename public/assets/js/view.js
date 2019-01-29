@@ -29,9 +29,11 @@ $(document).ready(function () {
     });
 
     //CAPTURE "Add ingredient button onclick"
+
     $("#newFood").on("click", function () {
         event.preventDefault();
         console.log(`new food button clicked`);
     });
 });
+
 
