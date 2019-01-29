@@ -2,12 +2,43 @@
     width: 75%;
     text-align: center;
 } */
+.nav-wrapper {
+    color: white;
+    background-color:
+    #f05c58;
+}
+
 .parallax-container {
     height: 200px;
 }
+
 .choose {
+    background-color: #5a2a36;
+}
+.choice {
+    /* width: 60%; */
     color: white;
-    background-color: green;
+    background-color: #4eaf45;
     padding: 20px;
-    margin: 0px;
+    margin: 0 auto;
+}
+
+.collapsible {
+    color: black;
+}
+
+.collapsible-body {
+    color: black;
+    background-color: white;
+}
+
+.results {
+    color: white;
+    background-color: #4eaf45;
+
+}
+
+.btn {
+    
+    background-color: #486080;
 }
