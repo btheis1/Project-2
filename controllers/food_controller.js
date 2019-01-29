@@ -23,6 +23,9 @@ router.get("/", function (req, res) {
     var legumes = data.filter(function (item) {
       return item.category === "Legumes";
     });
+    var other = data.filter(function(item) {
+      return item.category === "Other";
+    })
 
     var hbsObject = {
       vegetables: vegetables,
@@ -30,6 +33,7 @@ router.get("/", function (req, res) {
       protein: protein,
       fruit: fruit,
       legumes: legumes,
+      other: other
     };
     // console.log("In the / ", hbsObject);
     res.render("index", hbsObject);
@@ -48,7 +52,6 @@ router.get("/api/search", function (req, res) {
     .then(function (response) {
 
       res.json(response.data.recipes);
-      
     })
     .catch(function (err) {
       res.json(err);
@@ -66,13 +69,11 @@ router.post('/', function (req, res) {
       console.log(result);
 
       res.json(result);
+
+
+
     });
 });
-
-// //EXPRESS ROUTE TO ADD INGREDIENT
-// router.post('/', function (req, res) {
-
-// })
 
 
 // Export routes for server.js to use.

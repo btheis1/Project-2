@@ -98,6 +98,17 @@
                                 {{/each}}
                                 </span></div>
                         </li>
+                        <li>
+                        <div class="collapsible-header">Other</div>
+                            <div class="collapsible-body"><span>
+                                {{#each other}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
                     <button class="btn waves-effect waves-light white-text" type="submit" name="submit" id="recipes">Search Recipes!</button>
                 </form>    
             </div>
@@ -146,3 +157,25 @@
         </div>
         
     </div>
+    <footer class="page-footer" id="about">
+    <div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text text-lighten-4">Americans waste 150,000 tons of food each day (The Guardian, 2018). We created this site to eliminate food waste by enabling users to search recipes based on ingredients in their fridge that are waiting to be used up. With the help of the food2fork api and FoodSafety.gov, users can check when their ingredients actually expire, and use them up before expiration!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Contact Our Team: </h5>
+        <ul>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/nancybutterfield/" target="_blank"><i class="material-icons">person</i> Nancy Butterfield</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/brook-theis-40095089/" target="_blank"><i class="material-icons">person</i> Brook Theis</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/bhumi-shah-bb284458/" target="_blank"><i class="material-icons">person</i> Bhumi Shah </a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/ashlee-h-b5b665175/" target="_blank"><i class="material-icons">person</i> Ashlee Hackney</a></li>
+            <li><a class="grey-text text-lighten-3" href="!#" target="_blank""><i class="material-icons">person</i> Briana Watson</a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+    </div>
+</footer>
