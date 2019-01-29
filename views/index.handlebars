@@ -29,6 +29,81 @@
     <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
 </div>
 
+
+    <div class="choice" id="choice">
+      <div class="row">
+          <div class="col s6">
+            <h2 class="choose card-transparent z-depth-5">Choose three ingredients that you'd like to cook with...</h2>
+                <form action="#">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header">Vegetables</div>
+                                <div class="collapsible-body"><span>
+                                    {{#each vegetables}}
+                                    <label>
+                                        <input type="checkbox" value="{{name}}"/>
+                                        
+                                        <span>{{name}}</span>
+                                    </label>
+                                {{/each}}
+                                </span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Protein</div>
+                                <div class="collapsible-body"><span>
+                                    {{#each protein}}
+                                    <label>
+                                        <input type="checkbox" value="{{name}}"/>
+                                        <span>{{name}}</span>
+                                    </label>
+                                {{/each}}
+                                </span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Fruits</div>
+                                <div class="collapsible-body"><span>
+                                    {{#each fruit}}
+                                    <label>
+                                        <input type="checkbox" value="{{name}}"/>
+                                        <span>{{name}}</span>
+                                    </label>
+                                {{/each}}
+                                </span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Dairy</div>
+                                <div class="collapsible-body"><span>
+                                    {{#each dairy}}
+                                    <label>
+                                        <input type="checkbox" value="{{name}}"/>
+                                        <span>{{name}}</span>
+                                    </label>
+                                {{/each}}
+                                </span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Legumes</div>
+                                <div class="collapsible-body"><span>
+                                    {{#each legumes}}
+                                    <label>
+                                        <input type="checkbox" value="{{name}}"/>
+                                        <span>{{name}}</span>
+                                    </label>
+                                {{/each}}
+                                </span></div>
+                        </li>
+                    <button class="btn waves-effect waves-light white-text" type="submit" name="submit" id="recipes">Search Recipes!</button>
+                </form>    
+            </div>
+            <div class="col s6 results" id = "result">
+                {{#if recipes }}
+                {{#each recipes}}
+                {{title}}
+                {{/each}}
+                {{/if}}
+            
+            </div>
+
 <div class="choice" id="choice">
     <div class="row">
         <div class="col s6">

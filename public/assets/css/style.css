@@ -34,6 +34,9 @@
 .results {
     color: white;
     background-color: #4eaf45;
+
+    margin-top: 20px;
+
 }
 
 .add {
@@ -47,6 +50,10 @@
 }
 .btn { 
     background-color: #486080;
+}
+
+.card{
+    color:black;
 }
 
 .white {

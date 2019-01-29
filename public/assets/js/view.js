@@ -24,14 +24,46 @@ $(document).ready(function () {
 
         console.log("ingredients?", ingredients);
         console.log(ingredientsParams);
-        
-        $.ajax ({
+
+        $.ajax({
             method: "get",
             url: `/api/search?ingredients=${ingredientsParams}`
-        }).then(function(recipes) {
+        }).then(function (recipes) {
             console.log(recipes);
+            getRecipe(recipes);
         }
         );
+        function getRecipe(response) {
+
+            console.log("response inside getrecipe()", response);
+
+            for (var i = 0; i < response.length; i++) {
+
+
+                recipeTitle = response;
+                var recipeDiv = $("<div>");
+                recipeDiv.addClass("card");
+                recipeDiv.attr("id", "recipeCard");
+                recipeDiv.attr({ "style": "18rem" });
+
+                var title = $("<h5>");
+                title.addClass("card-title");
+                title.attr("id", "recipeTitle");
+                title.text(response[i].title);
+
+                var url = $("<a>");
+                url.addClass("source_url");
+                url.attr("target", "_blank")
+                url.attr("href", response[i].source_url);
+                url.text(response[i].source_url);
+
+
+                recipeDiv.append(title);
+                recipeDiv.append(url);
+                $("#result").append(recipeDiv);
+
+            }
+        }
      }
     });
 
