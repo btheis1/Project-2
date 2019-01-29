@@ -1,41 +1,34 @@
-    
-  {{!-- <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Waste Not, Want Not</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-      </ul>
-    </div>
-  </nav> --}}
-
-  <!-- Dropdown Structure -->
 <div class="navbar-fixed">
     <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#About">About</a></li>
-    <li><a href="#!">Is Your Food Expired?</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://www.foodbankrockies.org/agency-portal/agency-food-safety/" target="_blank">Is Your Food Really Expired?</a></li>
     </ul>
     <nav>
-    <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Waste Not, Want Not</a>
-        <ul class="right hide-on-med-and-down">
-        <li><a href="#choice">Search Recipes</a>></li>
-        <li><a href="#new">Add A New Ingredient</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-    </div>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Waste Not, Want Not</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#choice">Search Recipes</a></li>
+                <li><a href="#new">Add A New Ingredient</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Learn More<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#choice">Search Recipes</a></li>
+        <li><a href="#new">Add A New Ingredient</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://www.foodbankrockies.org/agency-portal/agency-food-safety/" target="_blank">Is Your Food Really Expired?</a></li>
+        
+    </ul>
 </div>
 
 
-    <div class="parallax-container">
-      <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
-    </div>
+<div class="parallax-container">
+    <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
+</div>
+
 
     <div class="choice" id="choice">
       <div class="row">
@@ -110,19 +103,98 @@
                 {{/if}}
             
             </div>
+
+<div class="choice" id="choice">
+    <div class="row">
+        <div class="col s6">
+        <h4 class="choose card-transparent z-depth-5">Choose three ingredients that you'd like to cook with...</h4>
+            <form action="#">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">Vegetables</div>
+                            <div class="collapsible-body"><span>
+                                {{#each vegetables}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Protein</div>
+                            <div class="collapsible-body"><span>
+                                {{#each protein}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Fruits</div>
+                            <div class="collapsible-body"><span>
+                                {{#each fruit}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Dairy</div>
+                            <div class="collapsible-body"><span>
+                                {{#each dairy}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Legumes</div>
+                            <div class="collapsible-body"><span>
+                                {{#each legumes}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Other</div>
+                            <div class="collapsible-body"><span>
+                                {{#each other}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
+                <button class="btn waves-effect waves-light white-text" type="submit" name="submit" id="recipes">Search Recipes!</button>
+            </form>    
         </div>
+        <div class="col s6 results"></div>
     </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
-    </div>
-       {{!-- <body class = "container">    --}}
-    <h2 class="choose card-transparent z-depth-5" id="new">Add a new ingredient to your fridge: </h2>
-    <br><br>
+</div>
+
+<div class="parallax-container">
+    <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
+</div>
+<div class="form">
     <div class = "row">
-        <form class = "col s12">
-        <div class = "row">
+        <h4 class="choose card-transparent z-depth-5" id="new">Add a new ingredient to your fridge: </h4>
+    
+        <form class = "col s6 offset-s4 white">
+        
             <div class = "input-field col s4">
-                <i class = "material-icons prefix">account_circle</i>
+                <i class = "material-icons prefix">add_circle</i>
                 <input placeholder = "foodName" value = "carrots" id = "name"
                     type = "text" class = "active validate" required />
                 <label for = "name"><strong>Ingredient Name:</strong></label>
@@ -144,7 +216,35 @@
                 <button class="btn waves-effect waves-light white-text" type="submit" name="newFood" id="newFood"><strong>Add Ingredient!</strong></button>
             </div>
             
-        </div>
+        </form>
         
     </div>
+</div> 
 
+<div class="parallax-container">
+    <div class="parallax"><img src="/assets/images/fridgeBackground.jpg"></div>
+</div>
+
+<footer class="page-footer" id="about">
+    <div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text text-lighten-4">Americans waste 150,000 tons of food each day (The Guardian, 2018). We created this site to eliminate food waste by enabling users to search recipes based on ingredients in their fridge that are waiting to be used up. With the help of the food2fork api and FoodSafety.gov, users can check when their ingredients actually expire, and use them up before expiration!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Contact Our Team: </h5>
+        <ul>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/nancybutterfield/" target="_blank"><i class="material-icons">person</i> Nancy Butterfield</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/brook-theis-40095089/" target="_blank"><i class="material-icons">person</i> Brook Theis</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/bhumi-shah-bb284458/" target="_blank"><i class="material-icons">person</i> Bhumi Shah </a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/ashlee-h-b5b665175/" target="_blank"><i class="material-icons">person</i> Ashlee Hackney</a></li>
+            <li><a class="grey-text text-lighten-3" href="!#" target="_blank""><i class="material-icons">person</i> Briana Watson</a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+    </div>
+</footer>
+            

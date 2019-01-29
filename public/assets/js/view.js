@@ -1,9 +1,9 @@
-//INITIALIZE parallax
 $(document).ready(function () {
     $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('select').formSelect();
     $(".dropdown-trigger").dropdown();
+    $('.sidenav').sidenav();
 
     //CAPTURE "Search Recipes" Button onclick
     $("#recipes").on("click", function () {
@@ -13,6 +13,12 @@ $(document).ready(function () {
         $("input[type=checkbox]:checked").each(function () {
             ingredients.push($(this).val().replace(/\s/g, "+").toLowerCase());
         });
+
+        if (ingredients.length > 3) {
+            alert("Please choose only three ingredients")
+        } else if (ingredients.length < 3) {
+            alert("Please choose three ingredients")
+        } else {
 
         var ingredientsParams = ingredients.join(",");
 
@@ -58,6 +64,7 @@ $(document).ready(function () {
 
             }
         }
+     }
     });
 
     //CAPTURE "Add ingredient button onclick"

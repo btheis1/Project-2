@@ -1,7 +1,4 @@
-/* .row-transparent {
-    width: 75%;
-    text-align: center;
-} */
+
 .nav-wrapper {
     color: white;
     background-color:
@@ -13,10 +10,12 @@
 }
 
 .choose {
+    color: white;
     background-color: #5a2a36;
+    padding: 10px;
+    margin: 10px;
 }
 .choice {
-    /* width: 60%; */
     color: white;
     background-color: #4eaf45;
     padding: 20px;
@@ -35,12 +34,21 @@
 .results {
     color: white;
     background-color: #4eaf45;
+
     margin-top: 20px;
 
 }
 
-.btn {
-    
+.add {
+    color: white;
+    background-color: #4eaf45;
+}
+
+.form {
+    color: white;
+    background-color: #4eaf45;
+}
+.btn { 
     background-color: #486080;
 }
 
@@ -48,3 +56,26 @@
     color:black;
 }
 
+.white {
+    margin: 0px auto;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+#newFood {
+    margin-top: 20px;
+}
+
+#recipes {
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    margin-right: 30px;
+}
+
+span {
+    padding: 5px;
+    margin: 5px;
+}
