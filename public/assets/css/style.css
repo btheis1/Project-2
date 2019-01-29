@@ -1,7 +1,4 @@
-/* .row-transparent {
-    width: 75%;
-    text-align: center;
-} */
+
 .nav-wrapper {
     color: white;
     background-color:
@@ -19,7 +16,6 @@
     margin: 10px;
 }
 .choice {
-    /* width: 60%; */
     color: white;
     background-color: #4eaf45;
     padding: 20px;
@@ -63,4 +59,9 @@
 
 #newFood {
     margin-top: 20px;
+}
+
+span {
+    padding: 5px;
+    margin: 5px;
 }
