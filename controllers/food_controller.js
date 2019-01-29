@@ -23,6 +23,9 @@ router.get("/", function (req, res) {
     var legumes = data.filter(function (item) {
       return item.category === "Legumes";
     });
+    var other = data.filter(function(item) {
+      return item.category === "Other";
+    })
 
     var hbsObject = {
       vegetables: vegetables,
@@ -30,6 +33,7 @@ router.get("/", function (req, res) {
       protein: protein,
       fruit: fruit,
       legumes: legumes,
+      other: other
     };
     // console.log("In the / ", hbsObject);
     res.render("index", hbsObject);
@@ -40,7 +44,7 @@ router.get("/", function (req, res) {
 
 router.get("/api/search", function (req, res) {
   console.log("query params", req.query);
-  axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_API_KEY}&q=${req.query.ingredients}`, {
+  axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_API_KEY}&q=${req.query.ingredients}&count=8`, {
     headers: { "Accept": "application/json" }
 
   })
@@ -48,6 +52,7 @@ router.get("/api/search", function (req, res) {
     .then(function (response) {
 
       res.json(response.data.recipes);
+      
     })
     .catch(function (err) {
       res.json(err);
@@ -67,6 +72,12 @@ router.post('/', function (req, res) {
       res.json(result);
     });
 });
+
+// //EXPRESS ROUTE TO ADD INGREDIENT
+// router.post('/', function (req, res) {
+
+// })
+
 
 // Export routes for server.js to use.
 module.exports = router;
