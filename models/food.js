@@ -10,12 +10,12 @@ var food = {
 		});
 	},
 	insert: function (cols, vals, cb) {
-		orm.insert("ingredient", cols, vals, function (res) {
+		orm.insert("ingredients", cols, vals, function (res) {
 			cb(res);
 		});
 	},
 	update: function (objColVals, condition, cb) {
-		orm.update("ingredient", objColVals, condition, function (res) {
+		orm.update("ingredients", objColVals, condition, function (res) {
 			cb(res);
 		});
 	}

@@ -1,51 +1,76 @@
 var express = require("express");
-
 var router = express.Router();
+var food = require("../models/food");
+var axios = require("axios");
 
-// router.get("/",function(req, res){
-//   res.send("hello world");
-// });
-//  Import the model (food.js) to use its database functions.
-var food = require("../models/food.js");
-router.get("/", function(req, res) {
-// res.redirect("/view");
-});
-// // Create all our routes and set up logic within those routes where required.
-router.get("/view", function (req, res) {
- food.all(function (data) {
+console.log("api key", process.env.FOOD2FORK_API_KEY)
+
+router.get("/", function (req, res) {
+  food.all(function (data) {
+    var vegetables = data.filter(function (item) {
+      return item.category === "Vegetable";
+    });
+    var dairy = data.filter(function (item) {
+      return item.category === "Dairy";
+    });
+    var protein = data.filter(function (item) {
+      return item.category === "Protein";
+    });
+
+    var fruit = data.filter(function (item) {
+      return item.category === "Fruit";
+    });
+    var legumes = data.filter(function (item) {
+      return item.category === "Legumes";
+    });
+
     var hbsObject = {
-    view: data
+      vegetables: vegetables,
+      dairy: dairy,
+      protein: protein,
+      fruit: fruit,
+      legumes: legumes,
     };
-    console.log(hbsObject);
+    // console.log("In the / ", hbsObject);
     res.render("index", hbsObject);
   });
+
 });
 
+
+router.get("/api/search", function (req, res) {
+  console.log("query params", req.query);
+  axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_API_KEY}&q=${req.query.ingredients}&count=1`, {
+    headers: { "Accept": "application/json" }
+
+  })
+
+    .then(function (response) {
+
+      res.json(response.data.recipes);
+    })
+    .catch(function (err) {
+      res.json(err);
+    })
+})
+
+// // Create all our routes and set up logic within those routes where required.
 // // Our POST request to add an ingredient to the database
 // //EXPRESS POST ROUTE
-router.post('/api/create', function (req, res) {
+router.post('/', function (req, res) {
   food.insert([
-    'name', "category"], 
+    'name', "category"],
     [req.body.name, req.body.category],
-     function (result) {
-    res.json({id: result.insertId});
-    
-  });
+    function (result) {
+      console.log(result);
+
+      res.json(result);
+
+
+
+    });
 });
 
-// //EXPRESS PUT ROUTE
-router.put('/api/view/:id', function (req, res) {
-  var newFood =  "id =" + req.params.id;
-
-  console.log("newFood", newFood);
-
-  food.update(
-     newFood, function (data) {
-      //  res.redirect("/");
-      res.end();
-  
-  });
-});
 
 // Export routes for server.js to use.
 module.exports = router;

@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL){
   password: "root",
   database: "food_db"
 });
-};
+}
 // Make connection.
 connection.connect(); 
 
