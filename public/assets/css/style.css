@@ -13,7 +13,10 @@
 }
 
 .choose {
+    color: white;
     background-color: #5a2a36;
+    padding: 10px;
+    margin: 10px;
 }
 .choice {
     /* width: 60%; */
@@ -35,10 +38,29 @@
 .results {
     color: white;
     background-color: #4eaf45;
-
 }
 
-.btn {
-    
+.add {
+    color: white;
+    background-color: #4eaf45;
+}
+
+.form {
+    color: white;
+    background-color: #4eaf45;
+}
+.btn { 
     background-color: #486080;
+}
+
+.white {
+    margin: 0px auto;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+#newFood {
+    margin-top: 20px;
 }
