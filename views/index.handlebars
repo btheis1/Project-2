@@ -102,7 +102,14 @@
                     <button class="btn waves-effect waves-light white-text" type="submit" name="submit" id="recipes">Search Recipes!</button>
                 </form>    
             </div>
-            <div class="col s6 results"></div>
+            <div class="col s6 results" id = "result">
+                {{#if recipes }}
+                {{#each recipes}}
+                {{title}}
+                {{/each}}
+                {{/if}}
+            
+            </div>
         </div>
     </div>
     <div class="parallax-container">
