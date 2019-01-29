@@ -91,6 +91,17 @@
                             {{/each}}
                             </span></div>
                     </li>
+                    <li>
+                        <div class="collapsible-header">Other</div>
+                            <div class="collapsible-body"><span>
+                                {{#each other}}
+                                <label>
+                                    <input type="checkbox" value="{{name}}"/>
+                                    <span>{{name}}</span>
+                                </label>
+                            {{/each}}
+                            </span></div>
+                    </li>
                 <button class="btn waves-effect waves-light white-text" type="submit" name="submit" id="recipes">Search Recipes!</button>
             </form>    
         </div>
