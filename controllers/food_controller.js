@@ -3,8 +3,6 @@ var router = express.Router();
 var food = require("../models/food");
 var axios = require("axios");
 
-console.log("api key", process.env.FOOD2FORK_API_KEY)
-
 router.get("/", function (req, res) {
   food.all(function (data) {
     var vegetables = data.filter(function (item) {
@@ -67,11 +65,7 @@ router.post('/', function (req, res) {
     [req.body.name, req.body.category],
     function (result) {
       console.log(result);
-
       res.json(result);
-
-
-
     });
 });
 
