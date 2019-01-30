@@ -8,7 +8,7 @@ console.log("api key", process.env.FOOD2FORK_API_KEY)
 router.get("/", function (req, res) {
   food.all(function (data) {
     var vegetables = data.filter(function (item) {
-      return item.category === "Vegetable";
+      return item.category === "Vegetable";s
     });
     var dairy = data.filter(function (item) {
       return item.category === "Dairy";
@@ -23,9 +23,6 @@ router.get("/", function (req, res) {
     var legumes = data.filter(function (item) {
       return item.category === "Legumes";
     });
-    var other = data.filter(function(item) {
-      return item.category === "Other";
-    })
 
     var hbsObject = {
       vegetables: vegetables,
@@ -33,7 +30,6 @@ router.get("/", function (req, res) {
       protein: protein,
       fruit: fruit,
       legumes: legumes,
-      other: other
     };
     // console.log("In the / ", hbsObject);
     res.render("index", hbsObject);
@@ -44,7 +40,7 @@ router.get("/", function (req, res) {
 
 router.get("/api/search", function (req, res) {
   console.log("query params", req.query);
-  axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_API_KEY}&q=${req.query.ingredients}&count=8`, {
+  axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_API_KEY}&q=${req.query.ingredients}&count=1`, {
     headers: { "Accept": "application/json" }
 
   })
