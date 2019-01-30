@@ -29,3 +29,5 @@ INSERT INTO ingredients (name, category) VALUES ("Green Beans", "Legumes");
 INSERT INTO ingredients (name, category) VALUES ("Kidney Beans", "Legumes");
 INSERT INTO ingredients (name, category) VALUES ("Edamame", "Legumes");
 INSERT INTO ingredients (name, category) VALUES ("Red Beans", "Legumes");
+-- Other seeding
+INSERT INTO ingredients (name, category) VALUES ("Almond", "Other");
