@@ -5,8 +5,10 @@ $(document).ready(function () {
     $('select').formSelect();
     $(".dropdown-trigger").dropdown();
 
+
     //CAPTURE "Search Recipes" Button onclick
     $("#recipes").on("click", function () {
+
         event.preventDefault();
         var ingredients = [];
 
@@ -25,6 +27,7 @@ $(document).ready(function () {
         }).then(function (recipes) {
             console.log(recipes);
             getRecipe(recipes);
+
         }
         );
         function getRecipe(response) {
@@ -58,26 +61,29 @@ $(document).ready(function () {
 
             }
         }
+        $("#newFood").on("click", function () {
+            event.preventDefault();
+            var newIngredient ={
+                name: $("#name").val().trim(),
+                category:$(".select-dropdown li.selected").text()
+            }
+            
+            $.ajax("/",{
+                type: "POST",
+                data: newIngredient
+            }).then(function(){
+                console.log("Created new ingredient")
+                location.reload();
+            })
+    
+            console.log(`new food button clicked`);
+        });    
+
     });
 
     //CAPTURE "Add ingredient button onclick"
 
-    $("#newFood").on("click", function () {
-        event.preventDefault();
-        var newIngredient ={
-            name: $("#name").val().trim(),
-            category:$("#category").val()
-        }
-        $.ajax("/",{
-            type: "POST",
-            data: newIngredient
-        }).then(function(){
-            console.log("Created new ingredient")
-            // location.reload();
-        })
-
-        console.log(`new food button clicked`);
-    });
+    
 });
 
 
