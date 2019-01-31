@@ -15,7 +15,11 @@ $(document).ready(function () {
         $("input[type=checkbox]:checked").each(function () {
             ingredients.push($(this).val().replace(/\s/g, "+").toLowerCase());
         });
-
+        
+        if (ingredients.length < 3) {
+            alert("Please select at least three ingredients.")
+        }
+        
         var ingredientsParams = ingredients.join(",");
 
         console.log("ingredients?", ingredients);
@@ -81,9 +85,6 @@ $(document).ready(function () {
 
     });
 
-    //CAPTURE "Add ingredient button onclick"
-
-    
 });
 
 
