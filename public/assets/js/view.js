@@ -5,24 +5,7 @@ $(document).ready(function () {
     $('select').formSelect();
     $(".dropdown-trigger").dropdown();
 
-    $("#newFood").on("click", function () {
-        event.preventDefault();
-        var newIngredient ={
-            name: $("#name").val().trim(),
-            category:$(".select-dropdown li.selected").text()
-        }
-        
-        $.ajax("/",{
-            type: "POST",
-            data: newIngredient
-        }).then(function(){
-            console.log("Created new ingredient")
-            location.reload();
-        })
-
-        console.log(`new food button clicked`);
-    });   
-    
+  
     //CAPTURE "Search Recipes" Button onclick
     $("#recipes").on("click", function () {
 
@@ -87,6 +70,25 @@ $(document).ready(function () {
 
             }
         }
-         
+
     });
+
+    $("#newFood").on("click", function () {
+        event.preventDefault();
+        var newIngredient ={
+            name: $("#name").val().trim(),
+            category:$(".select-dropdown li.selected").text()
+        }
+        
+        $.ajax("/",{
+            type: "POST",
+            data: newIngredient
+        }).then(function(){
+            console.log("Created new ingredient")
+            location.reload();
+        })
+
+        console.log(`new food button clicked`);
+    });    
 });
+
