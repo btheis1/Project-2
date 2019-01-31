@@ -65,26 +65,27 @@ $(document).ready(function () {
 
             }
         }
-        $("#newFood").on("click", function () {
-            event.preventDefault();
-            var newIngredient ={
-                name: $("#name").val().trim(),
-                category:$(".select-dropdown li.selected").text()
-            }
-            
-            $.ajax("/",{
-                type: "POST",
-                data: newIngredient
-            }).then(function(){
-                console.log("Created new ingredient")
-                location.reload();
-            })
-    
-            console.log(`new food button clicked`);
-        });    
+        
 
     });
 
+    $("#newFood").on("click", function () {
+        event.preventDefault();
+        var newIngredient ={
+            name: $("#name").val().trim(),
+            category:$(".select-dropdown li.selected").text()
+        }
+        
+        $.ajax("/",{
+            type: "POST",
+            data: newIngredient
+        }).then(function(){
+            console.log("Created new ingredient")
+            location.reload();
+        })
+
+        console.log(`new food button clicked`);
+    });    
 });
 
 
