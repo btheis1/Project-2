@@ -5,11 +5,12 @@ $(document).ready(function () {
     $('select').formSelect();
     $(".dropdown-trigger").dropdown();
 
-
+  
     //CAPTURE "Search Recipes" Button onclick
     $("#recipes").on("click", function () {
 
         event.preventDefault();
+        
         var ingredients = [];
 
         $("input[type=checkbox]:checked").each(function () {
@@ -18,8 +19,8 @@ $(document).ready(function () {
         
         if (ingredients.length < 3) {
             alert("Please select at least three ingredients.")
-        }
-        
+        } else {
+
         var ingredientsParams = ingredients.join(",");
 
         console.log("ingredients?", ingredients);
@@ -29,11 +30,15 @@ $(document).ready(function () {
             method: "get",
             url: `/api/search?ingredients=${ingredientsParams}`
         }).then(function (recipes) {
+            //clear checkboxes
+            $("input[type='checkbox']").prop("checked", false);
+            
             console.log(recipes);
             getRecipe(recipes);
 
         }
         );
+    }
         function getRecipe(response) {
 
             console.log("response inside getrecipe()", response);
@@ -65,7 +70,6 @@ $(document).ready(function () {
 
             }
         }
-        
 
     });
 
@@ -87,6 +91,4 @@ $(document).ready(function () {
         console.log(`new food button clicked`);
     });    
 });
-
-
 
