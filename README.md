@@ -2,7 +2,7 @@ Waste NOT : Want NOT
 
 
 Live Preview
-****heroku link here**
+https://intense-ravine-45137.herokuapp.com/
 
 Author(s)
 Brook Theis(Front-end)
